@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>A Note For You</title>
+  
+  <!-- Preconnect and Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ambient Subtle Background Graphics -->
+  <div class="ambient-background" aria-hidden="true">
+    <div class="glow-orb glow-orb-1"></div>
+    <div class="glow-orb glow-orb-2"></div>
+    <div class="subtle-grid"></div>
+  </div>
+
+  <!-- Minimal Header / Progress Counter -->
+  <header class="app-header" id="appHeader" aria-live="polite">
+    <span class="step-indicator" id="stepIndicator"></span>
+  </header>
+
+  <main class="viewport-frame">
+    <!-- 0. INTRO SCREEN -->
+    <section class="stage-screen active" id="introScreen">
+      <div class="stage-content">
+        <span class="eyebrow-tag">something i wanted you to read.</span>
+        <h1 class="hero-title">Before anything else…</h1>
+        <p class="hero-subtitle">I wanted to say this properly.</p>
+        <div class="action-wrap">
+          <button type="button" class="btn btn-primary" id="btnStart">
+            <span>Start</span>
+            <svg class="btn-arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M3.333 8h9.334M8.667 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1. SEQUENTIAL CHAPTERS SCREEN -->
+    <section class="stage-screen" id="chapterScreen" aria-live="polite">
+      <div class="stage-content" id="chapterContainer">
+        <!-- SVG Graphic Container -->
+        <div class="chapter-graphic" id="chapterGraphic" aria-hidden="true"></div>
+
+        <div class="chapter-meta">
+          <span class="chapter-num" id="chapterNum">01</span>
+          <span class="chapter-label" id="chapterLabel">LABEL</span>
+        </div>
+
+        <div class="chapter-body">
+          <p class="chapter-paragraph" id="chapterText"></p>
+        </div>
+
+        <div class="action-wrap">
+          <button type="button" class="btn btn-secondary" id="btnNextChapter">
+            <span>Got it</span>
+            <svg class="btn-arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M3.333 8h9.334M8.667 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. FINAL INTIMATE / RESPONSE SCREEN -->
+    <section class="stage-screen" id="finalScreen">
+      <div class="stage-content">
+        <span class="eyebrow-tag">and now…</span>
+        <div class="final-body">
+          <p class="chapter-paragraph" id="finalMessageText"></p>
+        </div>
+
+        <div class="prompt-break">
+          <span class="prompt-text">So… what do you think?</span>
+        </div>
+
+        <!-- Custom Response Choices (Equal Weight) -->
+        <form class="response-card" id="responseForm" onsubmit="event.preventDefault();">
+          <fieldset class="options-fieldset">
+            <legend class="sr-only">Your Response</legend>
+
+            <!-- Option 1: 2 October -->
+            <label class="choice-row" for="opt1">
+              <input type="radio" name="meetChoice" id="opt1" value="opt1" class="custom-radio-input">
+              <span class="custom-radio-mark" aria-hidden="true"></span>
+              <span class="choice-text">Let’s meet on 2 October</span>
+            </label>
+
+            <!-- Option 2: Alternate Date -->
+            <label class="choice-row" for="opt2">
+              <input type="radio" name="meetChoice" id="opt2" value="opt2" class="custom-radio-input">
+              <span class="custom-radio-mark" aria-hidden="true"></span>
+              <span class="choice-text">I’d prefer another date</span>
+            </label>
+            <div class="sub-input-container" id="dateInputWrap" aria-hidden="true">
+              <label for="customDateInput" class="input-sublabel">Choose a date</label>
+              <input type="date" id="customDateInput" class="custom-field" disabled>
+            </div>
+
+            <!-- Option 3: Polite Decline -->
+            <label class="choice-row" for="opt3">
+              <input type="radio" name="meetChoice" id="opt3" value="opt3" class="custom-radio-input">
+              <span class="custom-radio-mark" aria-hidden="true"></span>
+              <span class="choice-text">I don’t want to meet because…</span>
+            </label>
+            <div class="sub-input-container" id="reasonInputWrap" aria-hidden="true">
+              <label for="reasonTextInput" class="input-sublabel">Why?</label>
+              <textarea id="reasonTextInput" class="custom-field" rows="3" placeholder="Tell me honestly. You can say it exactly as you feel." disabled></textarea>
+            </div>
+          </fieldset>
+
+          <button type="button" class="btn btn-primary submit-btn" id="btnSubmitResponse" disabled>
+            <span id="submitBtnText">Send my response</span>
+            <svg class="btn-arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M3.333 8h9.334M8.667 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- 3. SENT CONFIRMATION SCREEN -->
+    <section class="stage-screen" id="sentScreen">
+      <div class="stage-content center-aligned">
+        <h2 class="closing-title">That’s all.</h2>
+        <p class="closing-subtitle">Whatever your answer is, thank you for reading this.</p>
+        <div class="quiet-pulsing-dot" aria-hidden="true"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
