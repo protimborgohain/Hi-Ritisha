@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>A Note For You</title>
   
-  <!-- Preconnect and Google Fonts: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -14,14 +13,14 @@
 </head>
 <body>
 
-  <!-- Ambient Subtle Background Graphics -->
+  <!-- Ambient Minimal Background -->
   <div class="ambient-background" aria-hidden="true">
     <div class="glow-orb glow-orb-1"></div>
     <div class="glow-orb glow-orb-2"></div>
     <div class="subtle-grid"></div>
   </div>
 
-  <!-- Minimal Header / Progress Counter -->
+  <!-- Progress Indicator -->
   <header class="app-header" id="appHeader" aria-live="polite">
     <span class="step-indicator" id="stepIndicator"></span>
   </header>
@@ -30,9 +29,43 @@
     <!-- 0. INTRO SCREEN -->
     <section class="stage-screen active" id="introScreen">
       <div class="stage-content">
-        <span class="eyebrow-tag">something i wanted you to read.</span>
-        <h1 class="hero-title">Before anything else…</h1>
-        <p class="hero-subtitle">I wanted to say this properly.</p>
+        <span class="eyebrow-tag">Hi Ritisha,</span>
+        <h1 class="hero-title">
+          It’s Protim
+          <span class="inline-emoji-wrapper" aria-label="smiling emoji">
+            <svg class="motion-3d-smile" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <radialGradient id="sphereGrad" cx="36%" cy="32%" r="68%">
+                  <stop offset="0%" stop-color="#FFE072" />
+                  <stop offset="55%" stop-color="#FFB300" />
+                  <stop offset="85%" stop-color="#F57C00" />
+                  <stop offset="100%" stop-color="#C65A00" />
+                </radialGradient>
+                <radialGradient id="glowHighlight" cx="30%" cy="26%" r="35%">
+                  <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.85" />
+                  <stop offset="60%" stop-color="#FFFFFF" stop-opacity="0" />
+                </radialGradient>
+                <filter id="smileShadow" x="-10%" y="-10%" width="120%" height="120%">
+                  <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.35" />
+                </filter>
+              </defs>
+              <!-- 3D Base Face -->
+              <circle cx="50" cy="50" r="44" fill="url(#sphereGrad)" filter="url(#smileShadow)" />
+              <circle cx="34" cy="30" r="16" fill="url(#glowHighlight)" />
+              
+              <!-- Smiling Eyes -->
+              <path class="eye-left" d="M30 42 C32 35, 40 35, 42 42" stroke="#5D2E00" stroke-width="4.5" stroke-linecap="round" />
+              <path class="eye-right" d="M58 42 C60 35, 68 35, 70 42" stroke="#5D2E00" stroke-width="4.5" stroke-linecap="round" />
+              
+              <!-- Cheerful Smile -->
+              <path class="mouth" d="M32 58 C38 72, 62 72, 68 58" stroke="#5D2E00" stroke-width="4.5" stroke-linecap="round" fill="none" />
+              <!-- Soft Blush -->
+              <ellipse cx="26" cy="53" rx="6" ry="3.5" fill="#FF5252" fill-opacity="0.3" />
+              <ellipse cx="74" cy="53" rx="6" ry="3.5" fill="#FF5252" fill-opacity="0.3" />
+            </svg>
+          </span>
+        </h1>
+        <p class="hero-subtitle">I wanted to say this to you properly.</p>
         <div class="action-wrap">
           <button type="button" class="btn btn-primary" id="btnStart">
             <span>Start</span>
@@ -44,10 +77,9 @@
       </div>
     </section>
 
-    <!-- 1. SEQUENTIAL CHAPTERS SCREEN -->
+    <!-- 1. CHAPTERS SCREEN -->
     <section class="stage-screen" id="chapterScreen" aria-live="polite">
       <div class="stage-content" id="chapterContainer">
-        <!-- SVG Graphic Container -->
         <div class="chapter-graphic" id="chapterGraphic" aria-hidden="true"></div>
 
         <div class="chapter-meta">
@@ -70,7 +102,7 @@
       </div>
     </section>
 
-    <!-- 2. FINAL INTIMATE / RESPONSE SCREEN -->
+    <!-- 2. FINAL MESSAGE & RESPONSE SCREEN -->
     <section class="stage-screen" id="finalScreen">
       <div class="stage-content">
         <span class="eyebrow-tag">and now…</span>
@@ -82,7 +114,7 @@
           <span class="prompt-text">So… what do you think?</span>
         </div>
 
-        <!-- Custom Response Choices (Equal Weight) -->
+        <!-- Custom Choice Interface -->
         <form class="response-card" id="responseForm" onsubmit="event.preventDefault();">
           <fieldset class="options-fieldset">
             <legend class="sr-only">Your Response</legend>
@@ -94,7 +126,7 @@
               <span class="choice-text">Let’s meet on 2 October</span>
             </label>
 
-            <!-- Option 2: Alternate Date -->
+            <!-- Option 2: Another Date -->
             <label class="choice-row" for="opt2">
               <input type="radio" name="meetChoice" id="opt2" value="opt2" class="custom-radio-input">
               <span class="custom-radio-mark" aria-hidden="true"></span>
@@ -105,7 +137,7 @@
               <input type="date" id="customDateInput" class="custom-field" disabled>
             </div>
 
-            <!-- Option 3: Polite Decline -->
+            <!-- Option 3: Decline with Honest Reason -->
             <label class="choice-row" for="opt3">
               <input type="radio" name="meetChoice" id="opt3" value="opt3" class="custom-radio-input">
               <span class="custom-radio-mark" aria-hidden="true"></span>
@@ -127,11 +159,11 @@
       </div>
     </section>
 
-    <!-- 3. SENT CONFIRMATION SCREEN -->
+    <!-- 3. AFTER-SEND SCREEN -->
     <section class="stage-screen" id="sentScreen">
       <div class="stage-content center-aligned">
         <h2 class="closing-title">That’s all.</h2>
-        <p class="closing-subtitle">Whatever your answer is, thank you for reading this.</p>
+        <p class="closing-subtitle">Whatever your answer is, thank you for taking the time to read this.</p>
         <div class="quiet-pulsing-dot" aria-hidden="true"></div>
       </div>
     </section>
