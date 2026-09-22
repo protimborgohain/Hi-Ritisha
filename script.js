@@ -1,18 +1,16 @@
 /**
  * ============================================================================
  * EDITABLE CONTENT & CONFIGURATION
- * Edit your chapter labels, paragraphs, and personal message below.
  * ============================================================================
  */
 
-const WHATSAPP_NUMBER = "+918011595012";
+const WHATSAPP_NUMBER = "918011595012";
 
 const chapters = [
   {
     number: "01",
     label: "MY INTENTION",
-    text: "This isn’t something I made to impress you. I just wanted to be completely clear about what I feel and what I'm looking for, without the rushed nature of everyday chat apps.",
-    // Graphic: Small glowing circle
+    text: "This isn’t something I built to impress you. I just wanted to be straightforward about what I feel and what I'm looking for, without rushing through texts on chat.",
     graphicSvg: `
       <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="28" cy="28" r="16" stroke="rgba(255,255,255,0.15)" stroke-width="1.2"/>
@@ -22,9 +20,8 @@ const chapters = [
   },
   {
     number: "02",
-    label: "WHAT I'M LOOKING FOR",
-    text: "I value calm clarity, real curiosity, and consistency. In a world full of ambiguous connections and games, I appreciate when two people can just be straightforward and open with one another.",
-    // Graphic: Two thin intersecting lines
+    label: "THINK OF ME AS A FRIEND FIRST",
+    text: "To be completely clear: I am not looking to jump blindly into a relationship or force any tags on this. Think of me as a friend first. Good things only grow when two people can comfortably talk, laugh, and be themselves without false expectations.",
     graphicSvg: `
       <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
         <line x1="14" y1="28" x2="42" y2="28" stroke="rgba(255,255,255,0.2)" stroke-width="1.2"/>
@@ -34,9 +31,8 @@ const chapters = [
   },
   {
     number: "03",
-    label: "WHAT I CURRENTLY WANT",
-    text: "At this stage in my life, I want to invest time in connections that have depth. I’m interested in getting to know who you really are — how your mind works, your thoughts, and what drives you.",
-    // Graphic: Small orbit animation
+    label: "WHY NOT JUST CHAT ONLINE?",
+    text: "Chatting on phones for months can feel comfortable, but it often creates an illusion. I genuinely respect your time and my time, and I don't want to waste either of ours. Meeting in person is the only honest way to see if our real vibe and conversation actually match.",
     graphicSvg: `
       <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="28" cy="28" r="18" stroke="rgba(255,255,255,0.12)" stroke-width="1" stroke-dasharray="2 4"/>
@@ -49,9 +45,8 @@ const chapters = [
   },
   {
     number: "04",
-    label: "WHAT I SEE IN YOU",
-    text: "From our conversations so far, I’ve noticed a sincerity and grounded perspective in you that feels rare. There is a calm authenticity to how you speak, and it genuinely made me want to know you better.",
-    // Graphic: Abstract gradient ring
+    label: "WHAT I NOTICE IN YOU",
+    text: "Ritisha, in our conversations so far, I really liked your simplicity and honest perspective. It felt grounded and refreshing, and it made me curious to know the real person behind the screen.",
     graphicSvg: `
       <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="28" cy="28" r="14" stroke="#8EA7FF" stroke-width="1" stroke-opacity="0.4"/>
@@ -61,9 +56,8 @@ const chapters = [
   },
   {
     number: "05",
-    label: "MY EXPECTATION",
-    text: "I don't hold rigid expectations. What matters most to me is comfort, honesty, and mutual effort. A space where neither of us feels like we have to perform or pretend to be anyone else.",
-    // Graphic: Minimal waveform
+    label: "WHAT I VALUE",
+    text: "I value simple honesty, clear communication, and equal effort. No pretending, no games. Just two people being comfortable and direct with each other.",
     graphicSvg: `
       <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
         <line x1="16" y1="28" x2="16" y2="28" stroke="#8EA7FF" stroke-width="2" stroke-linecap="round"/>
@@ -76,9 +70,8 @@ const chapters = [
   },
   {
     number: "06",
-    label: "NO PRESSURE",
-    text: "You don't owe me any particular answer. I would rather know what you genuinely feel than receive a polite response you think I want to hear. Real respect starts with leaving room for absolute honesty.",
-    // Graphic: Slowly expanding ring
+    label: "NO PRESSURE AT ALL",
+    text: "You do not owe me any particular answer. I would rather hear what you truly feel than get a polite reply just to make me happy. Take this at whatever pace you feel comfortable with.",
     graphicSvg: `
       <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle class="anim-circle" cx="28" cy="28" r="18" stroke="#8EA7FF" stroke-width="1.2" stroke-dasharray="3 3"/>
@@ -88,9 +81,8 @@ const chapters = [
   },
   {
     number: "07",
-    label: "WHY I'M TELLING YOU THIS",
-    text: "I built this clean page instead of sending a wall of text on WhatsApp because how a thought is delivered matters. It gave me a chance to slow down, be deliberate, and speak with real intention.",
-    // Graphic: Constellation dots
+    label: "WHY THIS LITTLE PAGE",
+    text: "I made this simple page instead of sending a big paragraph over WhatsApp because I wanted to take the time to put my thoughts across calmly and clearly.",
     graphicSvg: `
       <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="18" cy="20" r="2" fill="rgba(255,255,255,0.7)"/>
@@ -104,8 +96,7 @@ const chapters = [
   {
     number: "08",
     label: "ONE LAST THING",
-    text: "Before we move on, I wanted to step beyond digital screens and suggest meeting in person. Everything feels more grounded when you're actually sharing the same room.",
-    // Graphic: Single glowing point
+    text: "Which brings me to the point of asking: let's catch up over coffee or food in person. Simple, easy, and no pressure at all.",
     graphicSvg: `
       <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="28" cy="28" r="2" fill="#FFFFFF"/>
@@ -116,7 +107,7 @@ const chapters = [
   }
 ];
 
-const finalMessage = "I’d really like to meet you in person and see where this connection naturally leads. Screens are great for staying in touch, but sitting across from each other is the only real way to know if our energy aligns. Take your time, think about it, and let me know what feels comfortable for you.";
+const finalMessage = "I’d really like to meet you in person as friends and see how we get along in real life. I value both our time, and sitting across each other is the only real way to know if our energy matches. Take your time, think about it, and give me your honest answer.";
 
 /**
  * ============================================================================
@@ -127,16 +118,13 @@ const finalMessage = "I’d really like to meet you in person and see where this
 let currentChapterIndex = 0;
 let isTransitioning = false;
 
-// Stage Screens
 const introScreen = document.getElementById("introScreen");
 const chapterScreen = document.getElementById("chapterScreen");
 const finalScreen = document.getElementById("finalScreen");
 const sentScreen = document.getElementById("sentScreen");
 
-// App Header / Progress
 const stepIndicator = document.getElementById("stepIndicator");
 
-// Chapter Stage Elements
 const chapterContainer = document.getElementById("chapterContainer");
 const chapterNum = document.getElementById("chapterNum");
 const chapterLabel = document.getElementById("chapterLabel");
@@ -144,7 +132,6 @@ const chapterText = document.getElementById("chapterText");
 const chapterGraphic = document.getElementById("chapterGraphic");
 const btnNextChapter = document.getElementById("btnNextChapter");
 
-// Final Stage Elements
 const finalMessageText = document.getElementById("finalMessageText");
 const radioButtons = document.querySelectorAll('input[name="meetChoice"]');
 const dateInputWrap = document.getElementById("dateInputWrap");
@@ -161,29 +148,21 @@ const submitBtnText = document.getElementById("submitBtnText");
  */
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Populate final message paragraph
   finalMessageText.textContent = finalMessage;
 
-  // Restrict date input to today onwards
   const todayIso = new Date().toISOString().split("T")[0];
   customDateInput.setAttribute("min", todayIso);
 
-  // Start experience
   document.getElementById("btnStart").addEventListener("click", startExperience);
-
-  // Next chapter action
   btnNextChapter.addEventListener("click", handleNextChapter);
 
-  // Radio button choice changes
   radioButtons.forEach(radio => {
     radio.addEventListener("change", handleOptionChange);
   });
 
-  // Dynamic validation listeners for inputs
   customDateInput.addEventListener("input", validateResponse);
   reasonTextInput.addEventListener("input", validateResponse);
 
-  // Submit response via WhatsApp
   btnSubmitResponse.addEventListener("click", sendWhatsAppResponse);
 });
 
@@ -211,7 +190,6 @@ function handleNextChapter() {
       updateProgress(currentChapterIndex + 1, chapters.length);
     });
   } else {
-    // Transition from Chapter 8 into the Final Section
     stepIndicator.classList.remove("visible");
     switchScreen(chapterScreen, finalScreen, () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
@@ -233,9 +211,6 @@ function updateProgress(current, total) {
   stepIndicator.textContent = `${cStr} / ${tStr}`;
 }
 
-/**
- * Smooth transition between chapters within the same stage
- */
 function animateChapterTransition(renderCallback) {
   isTransitioning = true;
   chapterContainer.classList.remove("transition-in");
@@ -253,9 +228,6 @@ function animateChapterTransition(renderCallback) {
   }, 500);
 }
 
-/**
- * Screen-to-screen full stage switcher
- */
 function switchScreen(fromScreen, toScreen, onComplete) {
   const fromContent = fromScreen.querySelector(".stage-content");
   const toContent = toScreen.querySelector(".stage-content");
@@ -280,20 +252,18 @@ function switchScreen(fromScreen, toScreen, onComplete) {
 
 /**
  * ============================================================================
- * INTERACTIVE RESPONSE & ACCORDION BEHAVIOR
+ * INTERACTIVE RESPONSE
  * ============================================================================
  */
 
 function handleOptionChange(e) {
   const selectedValue = e.target.value;
 
-  // Highlight active row wrapper
   document.querySelectorAll(".choice-row").forEach(row => {
     row.classList.remove("is-selected");
   });
   e.target.closest(".choice-row").classList.add("is-selected");
 
-  // Reset conditional fields state
   dateInputWrap.classList.remove("open");
   dateInputWrap.setAttribute("aria-hidden", "true");
   customDateInput.disabled = true;
@@ -303,17 +273,14 @@ function handleOptionChange(e) {
   reasonTextInput.disabled = true;
 
   if (selectedValue === "opt1") {
-    // 2 October selected
     validateResponse();
   } else if (selectedValue === "opt2") {
-    // Another date selected -> Open datepicker
     dateInputWrap.classList.add("open");
     dateInputWrap.setAttribute("aria-hidden", "false");
     customDateInput.disabled = false;
     setTimeout(() => customDateInput.focus(), 300);
     validateResponse();
   } else if (selectedValue === "opt3") {
-    // Decline option -> Open reason textarea
     reasonInputWrap.classList.add("open");
     reasonInputWrap.setAttribute("aria-hidden", "false");
     reasonTextInput.disabled = false;
@@ -346,7 +313,7 @@ function validateResponse() {
 
 /**
  * ============================================================================
- * WHATSAPP MESSAGE GENERATION & DISPATCH
+ * WHATSAPP MESSAGE DISPATCH
  * ============================================================================
  */
 
@@ -367,7 +334,6 @@ function sendWhatsAppResponse() {
     detailFormatted = `Reason: ${reasonTextInput.value.trim()}`;
   }
 
-  // Construct readable WhatsApp message template
   let messageLines = [
     "Hey, I went through everything.",
     "",
@@ -380,21 +346,17 @@ function sendWhatsAppResponse() {
   }
 
   messageLines.push("");
-  messageLines.push("— Sent through the little page you made for me.");
+  messageLines.push("- Sent through the little page you made for me😊");
 
   const completeMessage = messageLines.join("\n");
   const encodedText = encodeURIComponent(completeMessage);
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedText}`;
 
-  // Visual feedback on button
   btnSubmitResponse.disabled = true;
   submitBtnText.textContent = "Preparing your response…";
 
   setTimeout(() => {
-    // Open WhatsApp in a new tab/window on desktop or launch app on mobile
     window.open(whatsappUrl, "_blank");
-
-    // Transition to the final quiet confirmation screen
     switchScreen(finalScreen, sentScreen);
   }, 700);
 }
